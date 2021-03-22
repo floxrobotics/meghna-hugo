@@ -2,23 +2,39 @@
 
 {{ if $data.applications.enable }}
 {{ with $data.applications }}
-<section id="applications" class="partial-area section" style='background-image: url("{{ .bg_image_webp | absURL }}")'>
+<section id="applications" class="parallax-section partial-area section" style='background-image: url("{{ .bg_image_webp | absURL }}")'>
 	<!-- this image is for trigger this section fallback background image -->
 	<img style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .bg_image | absURL }})'" src="{{ .bg_image_webp | absURL }}" />
 
-	<div class="block">
-		<h2 class="applications-subtitle">{{ .title | markdownify }}</h2>
-		<p class="applications-content">{{ .content | markdownify }}</p>
-        <div class="row justify-content-center">
-            <ol class="list">
+	<div class="block container ">
+		<div class="text-center">
+			<h2 class="applications-subtitle">{{ .title | markdownify }}</h2>
+			<p class="applications-content">{{ .content | markdownify }}</p>
+		</div>
+		<div class="border-meghna"></div>
+
+        <div class="row justify-content-center list">
                 {{ range $index, $element:= .items }}
-                <li class="item">
+                <div class="item col-lg-6">
                     <h2 class="headline">{{$element.title}}</h2>
-                    <span>{{$element.content}}</span>
-                </li>
+                    <p>{{$element.content}}</p>
+                </div>
                 {{end}}
-            </ol>
         </div>
+
+		<div class="row justify-content-center">			
+			<h2 style="margin-bottom: 2%;">How it Works</h2>
+		</div>
+		
+		<div class="row justify-content-center">
+			{{ range $index, $element:= .items_2 }}
+			<div class="col-lg-3">
+				<h2>{{$element.title}}</h2>
+				<p>{{$element.content}}</p>
+			</div>
+			{{end}}
+		</div>
+
         <div class="row justify-content-center arrow ">
 			<a href="{{.link}}" class="page-scroll">
 			<div class="round">

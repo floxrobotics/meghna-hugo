@@ -9,7 +9,6 @@
       <div class="col-lg-12">
         {{"<!-- section title -->" | safeHTML}}
         <div class="title text-center wow fadeInUp" data-wow-duration="500ms">
-
 					<h2>
 						{{ range $i,$w := split .title " "}}
 							{{ if eq $i 0 }}
@@ -19,22 +18,36 @@
 							{{end}}
 						{{ end }}
 					</h2>
-          <div class="border-meghna"></div>
+          <p class="team-content summary text-center">
+            {{ .content | markdownify }}
+          </p>
         </div>
       </div>
       {{"<!-- /section title -->" | safeHTML}}
     </div>
+
+    <div class="border-meghna-dark"></div>
     <div class="row justify-content-center">
-      <div class="col-lg-10 col-12 summary text-center">
-        <p>
-          {{ .content | markdownify }}
-        </p>
+      <div class="col-lg-12">
+        <div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+					<h2>
+						{{ range $i,$w := split .title_2 " "}}
+							{{ if eq $i 0 }}
+							<span class="titlecolor1"> {{$w}}</span>
+							{{ else }}
+							<span class="titlecolor2"> {{$w}}</span>
+							{{end}}
+						{{ end }}
+					</h2>
+        </div>
       </div>
-    </div> 
+      {{"<!-- /section title -->" | safeHTML}}
+    </div>
+
     <div class="row justify-content-center">
       {{ range .team_member}}
       {{"<!-- team member -->" | safeHTML}}
-      <div class="col-lg-5 col-md-6 col-12 wow fadeInDown" data-wow-duration="500ms">
+      <div class="col-lg-4 col-md-6 col-12 wow fadeInDown" data-wow-duration="500ms">
         <div class="team-member">
           <div class="member-photo">
             {{"<!-- member photo -->" | safeHTML}}
@@ -59,6 +72,27 @@
       </div>
       {{"<!-- end team member -->" | safeHTML}}
       {{ end }}
+    </div>
+    
+    <div class="border-meghna-dark" style="margin-top: 4%;"></div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        {{"<!-- section story -->" | safeHTML}}
+        <div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+					<h2>
+						{{ range $i,$w := split .title_3 " "}}
+							{{ if eq $i 0 }}
+							<span class="titlecolor1"> {{$w}}</span>
+							{{ else }}
+							<span class="titlecolor2"> {{$w}}</span>
+							{{end}}
+						{{ end }}
+					</h2>
+          <p> {{.content_3}} </p>
+        </div>
+      </div>
+      {{"<!-- /section story -->" | safeHTML}}
     </div>
   </div>
 </section>

@@ -1,30 +1,47 @@
 {{"<!-- end Contact Area -->" | safeHTML}}
-<footer id="footer" class="section-bg">
+<footer id="footer" class="section-bg" style="padding: 2%;">
 	<div class="container">
-		<div class="row wow fadeInUp" data-wow-duration="500ms">
-			<div class="col-xl-12">
+		<div class="row wow fadeInUp justify-content-between" data-wow-duration="500ms">
+			<div class="col-lg-9 col-xs-6 col-md-3">
+				<h6>Contacts</h6>
 
+				<ul class="footer-links">
+				  <li><i class="ti-email"></i> <a href="mailto:info@floxrobotics.com">info@floxrobotics.com</a></li>
+				  <li><i class="ti-mobile"></i> +46 727 813433</li>
+				  <li><i class="ti-location-pin"></i> Teknikringen 45, 114 28 Stockholm</li>
+				  <li>VAT number SE559291890701</li>
+				</ul>
+			</div>
+			<div class="col-lg-3">
 				{{"<!-- Footer Social Links -->" | safeHTML}}
-				<!-- <div class="social-icon">
+				<div class="social-icon">
 					<ul class="list-inline">
 						{{ range .Site.Params.social }}
 						<li class="list-inline-item"><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
 						{{ end }}
 					</ul>
-				</div> -->
+				</div>
 
 				{{"<!-- copyright -->" | safeHTML}}
-				<div class="copyright text-center">
-					<a href="{{ .Site.BaseURL | absLangURL }}">
-						<img class="footer-img" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
-					</a>			
-				</div>
 			</div>
 		</div>
 	</div>
-	<div class="thanks">
-			{{ .Site.Copyright | markdownify}}
-	</div>
+	<div class="container justify-content-between">
+        <div class="row">
+          <div class="col-lg-9 col-xs-6 col-md-3">
+            <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+         		<a href="#">Flox Aktiebolag</a>.
+            </p>
+          </div>
+
+          <div class="col-lg-3" style="text-align: -webkit-center;">
+				<a href="{{ .Site.BaseURL | absLangURL }}">
+					<img class="footer-img " src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
+				</a>
+          </div>
+        </div>
+      </div>
+
 </footer>
 {{"<!-- /footer -->" | safeHTML}}
 
