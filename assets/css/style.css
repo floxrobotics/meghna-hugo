@@ -612,7 +612,7 @@ a:hover {
 /*=================================================================
   Partials section
 ==================================================================*/
-@media (min-width: 720px) {
+@media (min-width: 1200px) {
   .partial-area {
     background-size: cover;
     height: 95vh;
@@ -625,7 +625,7 @@ a:hover {
 
   .partial-area:before {
     content: '';
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     right: 0;
@@ -808,7 +808,7 @@ a:hover {
 }
 
 .about .block div {
-background: rgb(0,0,0,0.5);
+background: rgb(0,0,0,0.7);
 }
 
 .about .block span {
