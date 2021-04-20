@@ -12,7 +12,7 @@
 			<i class="{{ .icon }}"></i>
 		</div>
 		{{ end }}
-		<img class="banner_logo" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .fg_image | absURL }})'" src="{{ .fg_image | absURL }}" />
+		<!-- <img class="banner_logo" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .fg_image | absURL }})'" src="{{ .fg_image | absURL }}" /> -->
 		<h2 class="hero-subtitle">{{ .subtitle | markdownify }}</h2>
 		<h3 class="hero-content">{{ .content | markdownify }}</h3>
 		{{ if .button.enable }}
